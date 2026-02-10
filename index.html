@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Thanvant | Photography</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+</head>
+<body>
+
+<div class="flying-bird">🦅</div>
+<div class="flying-bird">🕊️</div>
+<div class="flying-bird">🦅</div>
+<div class="flying-bird">🦜</div>
+<div class="flying-bird">🕊️</div>
+<div class="flying-bird">🦉</div>
+
+<nav id="navbar"></nav>
+
+<section class="hero">
+  <h1>Thanvant R</h1>
+  <p>Wildlife & Nature Photographer</p>
+</section>
+
+<section class="about">  <span class="leaf">🍂</span>
+  <span class="leaf">🍃</span>
+  <span class="leaf">🍂</span>
+  <span class="leaf">🍃</span>
+  <span class="leaf">🍂</span>
+  <span class="leaf">🍃</span>
+  <span class="leaf">🍂</span>
+  <span class="leaf">🍃</span>  <h2>About Me</h2>
+  <p>
+    I’m Thanvant R, a nature and wildlife photographer with a strong focus on birds, landscapes, and the quiet stories of the natural world. My work is driven by patience, observation, and a deep respect for ecosystems that often go unnoticed.
+
+Through photography, I aim to document moments that highlight both the beauty and fragility of nature—capturing behavior, light, and mood in their most authentic form. I enjoy working in natural habitats, waiting for the right moment rather than staging one, allowing each image to reflect a genuine connection between the subject and its environment.
+
+Alongside photography, I’m continuously learning and experimenting with technology and creative tools to build meaningful visual experiences, including this website as a space to showcase my work. Whether it’s a fleeting bird call or a still forest scene, I believe every frame has a story worth telling..
+  </p>
+</section>
+
+<section class="featured">
+  <span class="leaf">🍂</span>
+  <span class="leaf">🍃</span>
+  <span class="leaf">🍂</span>
+  <span class="leaf">🍃</span>
+  <span class="leaf">🍂</span>
+  <span class="leaf">🍃</span>
+  <span class="leaf">🍂</span>
+  <span class="leaf">🍃</span>
+  <h2>Featured Work</h2>
+  <div class="gallery" id="featured-gallery"></div>
+</section>
+
+<script src="js/navbar.js"></script>
+<script src="js/data-loader.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/lightbox.js"></script>
+<script>
+  initGallery("data/home.json", "featured-gallery", 6);
+</script>
+
+<footer class="contact-footer">
+  <div class="footer-container">
+    <h2>Get In Touch</h2>
+    <p>Let's connect and share ideas</p>
+    <div class="contact-links">
+      <a href="mailto:thanvantr@gmail.com" class="contact-link">
+        <span class="icon">✉</span> thanvantr@gmail.com
+      </a>
+      <a href="https://instagram.com/iclicks_bythanvant" target="_blank" class="contact-link">
+        <span class="icon">📷</span> iclicks_bythanvant
+      </a>
+    </div>
+    <p class="footer-credit">&copy; 2026 Thanvant R. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+/* Events Gallery - Professional Studio Theme */
+.page-title {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
+  color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+  font-size: 3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    inset 0 -10px 30px rgba(0, 0, 0, 0.5),
+    0 10px 30px rgba(0, 0, 0, 0.3);
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  letter-spacing: 2px;
+}
+
+/* Professional spotlight effect */
+.page-title::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse at center, rgba(74, 144, 226, 0.15) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  pointer-events: none;
+  animation: studioSpotlight 4s ease-in-out infinite;
+}
+
+@keyframes studioSpotlight {
+  0%, 100% {
+    opacity: 0.8;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.page-title {
+  text-decoration: none;
+  z-index: 2;
+  position: relative;
+  font-family: 'Georgia', serif;
+  font-weight: 300;
+}
+
+/* Decorative lines */
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, #4a90e2, transparent);
+  z-index: 2;
+}
+
+/* Gallery styling with studio aesthetic */
+.gallery {
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #f8f8f8 0%, #e8e8e8 100%);
+  position: relative;
+}
+
+.gallery::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #4a90e2, transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.gallery::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #4a90e2, transparent);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.gallery {
+  z-index: 2;
+  position: relative;
+}
+
+/* Smooth transitions for gallery items */
+.gallery-item {
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(74, 144, 226, 0.2);
+}

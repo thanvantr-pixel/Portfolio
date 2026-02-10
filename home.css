@@ -1,0 +1,193 @@
+.hero {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  opacity: 0.7;
+  font-weight: 900;
+  font-size: 1.3rem;
+}
+
+.about, .featured {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5f9f6 0%, #e8f2e8 100%);
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.about::before, .featured::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(ellipse 200px 150px at 10% 20%, rgba(76, 175, 80, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse 200px 150px at 90% 80%, rgba(76, 175, 80, 0.05) 0%, transparent 60%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.about > *, .featured > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Falling leaves animation */
+.leaf {
+  position: absolute;
+  bottom: 100%;
+  opacity: 0.6;
+  font-size: 2rem;
+  animation: fall linear infinite;
+  z-index: 0;
+}
+
+.leaf:nth-child(1) {
+  left: 10%;
+  animation-duration: 8s;
+  animation-delay: 0s;
+}
+
+.leaf:nth-child(2) {
+  left: 20%;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+.leaf:nth-child(3) {
+  left: 30%;
+  animation-duration: 12s;
+  animation-delay: 4s;
+}
+
+.leaf:nth-child(4) {
+  left: 40%;
+  animation-duration: 9s;
+  animation-delay: 1s;
+}
+
+.leaf:nth-child(5) {
+  left: 50%;
+  animation-duration: 11s;
+  animation-delay: 3s;
+}
+
+.leaf:nth-child(6) {
+  left: 60%;
+  animation-duration: 10s;
+  animation-delay: 2.5s;
+}
+
+.leaf:nth-child(7) {
+  left: 70%;
+  animation-duration: 13s;
+  animation-delay: 5s;
+}
+
+.leaf:nth-child(8) {
+  left: 80%;
+  animation-duration: 9s;
+  animation-delay: 1.5s;
+}
+
+@keyframes fall {
+  to {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+/* Flying birds animation */
+.flying-bird {
+  position: fixed;
+  font-size: 2.5rem;
+  opacity: 0.7;
+  animation: fly linear infinite;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.flying-bird:nth-child(1) {
+  top: 15%;
+  animation-duration: 12s;
+  animation-delay: 0s;
+}
+
+.flying-bird:nth-child(2) {
+  top: 25%;
+  animation-duration: 14s;
+  animation-delay: 2s;
+}
+
+.flying-bird:nth-child(3) {
+  top: 35%;
+  animation-duration: 13s;
+  animation-delay: 4s;
+}
+
+.flying-bird:nth-child(4) {
+  top: 45%;
+  animation-duration: 15s;
+  animation-delay: 1s;
+}
+
+.flying-bird:nth-child(5) {
+  top: 55%;
+  animation-duration: 12s;
+  animation-delay: 3s;
+}
+
+.flying-bird:nth-child(6) {
+  top: 65%;
+  animation-duration: 14s;
+  animation-delay: 5s;
+}
+
+@keyframes fly {
+  from {
+    left: -50px;
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(-1);
+  }
+  to {
+    left: 100vw;
+    transform: scaleX(-1);
+  }
+}
+
+/* Forest tree silhouettes */
+.about::after, .featured::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 60"><defs><pattern id="trees" patternUnits="userSpaceOnUse" width="120" height="60"><path d="M10,60 L10,40 L5,45 L10,35 L2,42 L10,30 L0,35 L10,20 L8,22 L10,10 L12,22 L10,20 L20,35 L10,30 L18,42 L10,35 L15,45 L10,40 L10,60 Z" fill="%234a7c59" opacity="0.3"/><path d="M70,60 L70,35 L65,40 L70,28 L62,35 L70,20 L60,28 L70,10 L72,28 L70,20 L80,35 L70,28 L78,40 L70,35 L75,45 L70,40 L70,60 Z" fill="%234a7c59" opacity="0.2"/></pattern></defs><rect width="1200" height="60" fill="url(%23trees)"/></svg>') repeat-x bottom;
+  background-size: 120px 60px;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}

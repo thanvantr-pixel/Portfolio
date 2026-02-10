@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Birds | Thanvant</title>
+  <link rel="stylesheet" href="css/global.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/gallery.css" />
+  <link rel="stylesheet" href="css/birds.css" />
+</head>
+<body>
+
+<div class="flying-bird">🦅</div>
+<div class="flying-bird">🕊️</div>
+<div class="flying-bird">🦅</div>
+<div class="flying-bird">🦜</div>
+<div class="flying-bird">🕊️</div>
+<div class="flying-bird">🦉</div>
+
+<nav id="navbar"></nav>
+
+<h1 class="page-title">
+  <span class="flying-bird">🦅</span>
+  <span class="flying-bird">🦜</span>
+  <span class="flying-bird">🕊️</span>
+  Birds
+</h1>
+<div class="gallery" id="gallery"></div>
+
+<div id="lightbox" class="lightbox hidden">
+  <img id="lightbox-img" />
+</div>
+
+<script src="js/navbar.js"></script>
+<script src="js/gallery.js"></script>
+<script src="js/lightbox.js"></script>
+<script src="js/data-loader.js"></script>
+
+<script>
+  initGallery("data/birds.json", "gallery");
+</script>
+
+</body>
+</html>
