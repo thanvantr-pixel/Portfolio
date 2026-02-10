@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-image: url("../assets/images/background.jpg"); /* change path if needed */
+  background-size: cover;        /* makes image cover full screen */
+  background-position: center;   /* centers the image */
+  background-repeat: no-repeat;  /* no tiling */
+  background-attachment: fixed;  /* nice parallax effect */
+  color: #0f0f0f;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+.page-title {
+  margin: 40px 0;
+}
